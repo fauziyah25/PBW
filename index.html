@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Modul 05 - Bootstrap 5</title>
+    <!-- 5.1 Menghubungkan CSS Bootstrap 5 via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- 5.7 Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Praktikum PBW</a>
+            <span class="badge bg-warning text-dark">Modul 05</span>
+        </div>
+    </nav>
+
+    <!-- 5.1 Container & 5.2 Grid System -->
+    <div class="container">
+        
+        <!-- 5.4 Alert Dismissible -->
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Info Praktikum:</strong> Halaman ini dibuat untuk mencoba komponen dasar Bootstrap, pada Modul 05 PBW.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="row g-4">
+            <!-- Kolom Utama (Lebar 8/12 di layar medium ke atas) -->
+            <div class="col-md-8">
+                
+                <!-- 5.3 Typography & Tables -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary fw-bold">Data Mahasiswa (Tabel Bootstrap)</h4>
+                        <p class="lead fs-6 text-muted">Contoh penerapan kelas <code>table-striped</code>, <code>table-hover</code>, dan <code>table-bordered</code>.</p>
+                        
+                        <table class="table table-striped table-hover table-bordered mt-3">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>No</th>
+                                    <th>NPM</th>
+                                    <th>Nama</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2510631170001</td>
+                                    <td>Bima</td>
+                                    <td><span class="badge bg-success">Aktif</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2510631170002</td>
+                                    <td>Rieru</td>
+                                    <td><span class="badge bg-success">Aktif</span></td>
+                                </tr>
+                                    <tr>
+                                    <td>3</td>
+                                    <td>2510631170003</td>
+                                    <td>Sadewa</td>
+                                    <td><span class="badge bg-success">Aktif</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 5.10, 5.11, 5.12 Forms & Validation -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary fw-bold mb-3">Formulir & Validasi</h4>
+                        <form>
+                            <!-- 5.12 Floating Label -->
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingEmail" placeholder="nama@unsika.ac.id">
+                                <label for="floatingEmail">Alamat Email</label>
+                            </div>
+
+                            <!-- 5.11 Input Group -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" placeholder="Username GitHub">
+                            </div>
+
+                            <!-- 5.10 Select Menu -->
+                            <div class="mb-3">
+                                <label class="form-label">Program Studi</label>
+                                <select class="form-select">
+                                    <option selected>Pilih Program Studi</option>
+                                    <option value="1">Informatika</option>
+                                    <option value="2">Sistem Informasi</option>
+                                </select>
+                            </div>
+
+                            <!-- 5.11 Switch -->
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="notifSwitch" checked>
+                                <label class="form-check-label" for="notifSwitch">Aktifkan Notifikasi</label>
+                            </div>
+
+                            <!-- 5.5 Buttons -->
+                            <button type="submit" class="btn btn-primary">Simpan Data</button>
+                            <button type="reset" class="btn btn-outline-danger">Reset</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Kolom Sidebar (Lebar 4/12 di layar medium ke atas) -->
+            <div class="col-md-4">
+                
+                <!-- 5.7 Card & 5.8 Modal Trigger -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Uji Interaksi Modal</h5>
+                        <p class="card-text">Klik tombol di bawah untuk memunculkan dialog pop-up tanpa menulis kode JS manual.</p>
+                        <!-- Tombol Pemicu Modal -->
+                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#contohModal">
+                            Buka Pop-up Modal
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5.6 List Group & Progress Bar -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Progres Praktikum</h5>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-info text-dark fw-bold" style="width: 85%">85%</div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item active">05. Bootstrap 5</li>
+                            <li class="list-group-item">06. Git & GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 5.8 Struktur Modal Pop-up -->
+    <div class="modal fade" id="contohModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Halo dari Bootstrap Modal!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Komponen Modal ini berjalan otomatis menggunakan file <code>bootstrap.bundle.min.js</code>.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5.1 Menghubungkan JS Bootstrap 5 via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
